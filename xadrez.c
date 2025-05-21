@@ -8,45 +8,36 @@ int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     int bispoMaximo, torreMaximo, rainhaMaximo;
-    char movimento[32];
 
     bispoMaximo = 5;
     torreMaximo = 5;
-    rainhaMaximo = 5;
+    rainhaMaximo = 8;
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    for (int i = 0; i < bispoMaximo; i++)
-    {
-        printf("Escolha uma direção pro bispo(%d movimentos restantes): \n", (bispoMaximo - i));
-        printf("--CimaDireita; CimaEsquerda; BaixoDireita; BaixoEsquerda--\n");
-        scanf("%s", movimento);
+    int i = 0;
+    while (i < bispoMaximo){
 
-        printf("Bispo se moveu para: %s \n\n", movimento);
+        printf("Bispo se moveu para: Cima Direita \n\n");
+        i++;
     }
     
-
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-    for (int i = 0; i < torreMaximo; i++)
+    for (int j = 0; j < torreMaximo; j++)
     {
-        printf("Escolha uma direção pro bispo(%d movimentos restantes): \n", (torreMaximo - i));
-        printf("--Cima; Baixo; Direita; Esquerda--\n");
-        scanf("%s", movimento);
-
-        printf("Bispo se moveu para: %s \n\n", movimento);
+        printf("Torre se moveu para: direita \n\n");
     }
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    for (int i = 0; i < rainhaMaximo; i++)
+    int k = 0;
+    do
     {
-        printf("Escolha uma direção pro bispo(%d movimentos restantes): \n", (rainhaMaximo - i));
-        printf("--Qualquer direção--\n");
-        scanf("%s", movimento);
-
-        printf("Bispo se moveu para: %s \n\n", movimento);
-    }
+        printf("Rainha se moveu para: esquerda \n\n");
+        k++;
+    } while (k < rainhaMaximo);
+    
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
